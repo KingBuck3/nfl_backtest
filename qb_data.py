@@ -4,7 +4,6 @@ import bs4 as bs
 import requests
 import time as t
 
-
 def populate_team_dict(pass_defense_df, player_pool_df):
     ''' Function populate_team_dict
             Parameters: pass_defense_df and player_pool_df both pandas
