@@ -105,7 +105,7 @@ def modify_vegas_data(vegas_df, team_dict):
             identifies the season and week. Second, it creates two new
             columns "team_home_id" and "team_away_id", which are mapped
             by team_dict. Third, it utilizes the .mask() method to identify
-            whethere the favorite is the home team or the away team.
+            whether the favorite is the home team or the away team.
             Fourth, the spread and the game total are used to calculated the
             implied team totals for the favorite and the underdog. Fifth,
             favorite_df and underdog_df are created to facilitate future
