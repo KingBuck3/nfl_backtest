@@ -17,8 +17,7 @@ def populate_team_dict(pass_defense_df, player_pool_df):
             through each team abbreviation in mod_player_pool_df, extracts
             each unique team abbreviation, and populates each unique team
             abbreviation in team_abbreviations_list. Finally, team_dict is
-            initialized and returned.
-            
+            initialized and returned.   
     '''
     team_abbreviations_dict = {"SFO":"SF","KAN":"KC","NWE":"NE","NOR": "NO",\
                               "GNB": "GB", "TAM": "TB"}
@@ -221,6 +220,7 @@ def merge_dataframes(pass_defense_df, player_pool_df, vegas_df, team_dict):
                                       right_on = ["Season_Week", "Team Abbr"])
     final_mod_df = final_mod_df.set_index("Player Name")
     final_mod_df = final_mod_df.drop(["Team Dict Abbr"], axis = 1)
+    
     return final_mod_df
 
 def main():
