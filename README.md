@@ -4,7 +4,7 @@ My goal with this project is to predict fantasty points scored by National Footb
 historical data, such as passing defense stats, point spread and point totals predicted by sportsbooks, and fantasy points scored by
 players.
 
-The qb_model file has all of the functions I have built to wrangle and merge datasets. After running the main() program, the output results
+The qb_data file has all of the functions I have built to wrangle and merge datasets. After running the main() program, the output results
 in a .csv file indexed by each player for a given week. The .csv file includes the stats of the defense that the player is facing, the game
 pread game total, and the player's team total.
 
