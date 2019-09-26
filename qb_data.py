@@ -4,7 +4,9 @@ import bs4 as bs
 import requests
 import time as t
 
-def populate_team_dict(pass_defense_df, player_pool_df):
+from typing import Dict
+
+def populate_team_dict(pass_defense_df: pd.DataFrame, player_pool_df: pd.DataFrame) -> Dict:
     ''' Function populate_team_dict
             Parameters: pass_defense_df and player_pool_df both pandas
             DataFrames
@@ -38,7 +40,7 @@ def populate_team_dict(pass_defense_df, player_pool_df):
     
     return team_dict
 
-def modify_player_pool(player_pool_df):
+def modify_player_pool(player_pool_df: pd.DataFrame) -> pd.DataFrame:
     ''' Function modify_player_pool
             Parameters: player_pool_df, a pandas DataFrame
             Returns: mod_player_pool_df, also a pandas DataFrame.
@@ -90,7 +92,7 @@ def modify_player_pool(player_pool_df):
     
     return mod_player_pool_df
 
-def modify_pass_defense_stats(pass_defense_df):
+def modify_pass_defense_stats(pass_defense_df: pd.DataFrame) -> pd.DataFrame:
     ''' Function modify_pass_defense_stats
             Parameters: pass_defense_df, a pandas DataFrame
             Returns: mod_pass_defense_df, also a pandas DataFrame
@@ -108,7 +110,7 @@ def modify_pass_defense_stats(pass_defense_df):
     
     return mod_pass_defense_df
 
-def modify_vegas_data(vegas_df, team_dict):
+def modify_vegas_data(vegas_df: pd.DataFrame, team_dict: Dict) -> pd.DataFrame:
     ''' Function merge_dataframes
             Parameters: vegas_df, a pandas DataFrame and
             team_dict, a dictionary.
@@ -171,7 +173,7 @@ def modify_vegas_data(vegas_df, team_dict):
     
     return final_vegas_df
     
-def merge_dataframes(pass_defense_df, player_pool_df, vegas_df, team_dict):
+def merge_dataframes(pass_defense_df: pd.DataFrame, player_pool_df: pd.DataFrame, vegas_df: pd.DataFrame, team_dict: Dict):
     ''' Function merge_dataframes
             Parameters: pass_defense_df, player_pool_df, and vegas_df,
             all pandas DataFrames
